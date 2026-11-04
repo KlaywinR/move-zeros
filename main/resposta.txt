@@ -1,3 +1,25 @@
-A abordagem com fila viola a restrição de espaço O(1) porque utiliza memória auxiliar para armazenar os elementos não nulos. Essa memória cresce proporcionalmente ao tamanho do array, resultando em espaço O(n).
+## Comparação entre as soluções
 
-Apesar de manter tempo O(n), ela não atende à exigência de espaço constante. A solução in-place é mais adequada, pois utiliza apenas variáveis auxiliares, mantendo espaço O(1).
+Foram desenvolvidas duas formas de resolver o problema de mover os zeros para o final do array, mantendo a ordem dos demais números.
+
+**1. Solução in-place**
+
+Essa abordagem modifica diretamente o array original, sem criar outra estrutura para armazenar os elementos.
+
+- Tempo: O(n), pois percorre os elementos do array.
+- Espaço: O(1), pois utiliza apenas algumas variáveis auxiliares.
+
+**2. Solução utilizando fila (Queue)**
+
+Nessa abordagem, os números diferentes de zero são armazenados em uma fila. Depois, eles são colocados novamente no array, seguidos pelos zeros.
+
+- Tempo: O(n), pois percorre os elementos e reconstrói o array.
+- Espaço: O(n), pois a fila precisa armazenar os elementos que não são zero.
+
+### Conclusão
+
+As duas soluções apresentam tempo O(n), mas possuem diferenças no uso da memória.
+
+A solução in-place é mais eficiente nesse aspecto, pois utiliza apenas algumas variáveis auxiliares. Já a solução com fila precisa de memória adicional, que aumenta conforme o tamanho do array.
+
+Por isso, a solução in-place é a mais indicada quando a entrevista técnica exige espaço O(1).
