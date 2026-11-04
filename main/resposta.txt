@@ -1,0 +1,3 @@
+A abordagem com fila viola a restrição de espaço O(1) porque utiliza memória auxiliar para armazenar os elementos não nulos. Essa memória cresce proporcionalmente ao tamanho do array, resultando em espaço O(n).
+
+Apesar de manter tempo O(n), ela não atende à exigência de espaço constante. A solução in-place é mais adequada, pois utiliza apenas variáveis auxiliares, mantendo espaço O(1).
